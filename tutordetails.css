@@ -1,0 +1,202 @@
+body {
+    background-color: #faf5ef;
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    background-color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+.links {
+    display: flex;
+    gap: 30px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.links a:hover {
+    color: #555;
+}
+
+/* Layout Styles */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Tutor Details Styles */
+.tutor-details {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.tutor-info {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.tutor-description {
+    margin-left: 20px;
+}
+
+.tutor-description h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.tutor-description p {
+    font-size: 18px;
+    color: #555;
+}
+
+.contact-btn {
+    background-color: #1E4DB7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.contact-btn:hover {
+    background-color: #14528d;
+}
+
+/* Calendar Styles */
+.availability-calendar {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto; /* Centers the calendar horizontally */
+    position: relative; /* Add this line */
+}
+
+.book-now {
+    position: absolute; /* Position the button absolutely */
+    bottom: 20px; /* Place the button 20px from the bottom */
+    right: 20px; /* Place the button 20px from the right */
+}
+
+.book-btn {
+    background-color: #1E4DB7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.book-btn:hover {
+    background-color: #14528d;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.prev-month, .next-month {
+    font-size: 25px;
+    cursor: pointer;
+    color: #1E4DB7;
+}
+
+.month-year {
+    font-size: 22px;
+}
+
+.calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    justify-items: center;
+    padding: 10px;
+}
+
+.day {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.day:hover {
+    background-color: #f1f1f1; /* Lighter background color on hover */
+    transform: scale(1.1); /* Slightly enlarge the day on hover */
+}
+
+.day.available {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.day.unavailable {
+    background-color: #f44336;
+    color: white;
+}
+
+.day.available:hover {
+    background-color: #45a049; /* Slightly darker green for available dates on hover */
+}
+
+.day.unavailable:hover {
+    background-color: #e53935; /* Slightly darker red for unavailable dates on hover */
+}
+
+.day.today {
+    border: 2px solid #1E4DB7; /* Complete the color code for the border */
+}
+
